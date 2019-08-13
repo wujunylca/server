@@ -64,16 +64,8 @@ obj.find = function(cname,filter,fn){
     })
 }
 
- function    sleep(time){
-     return new Promise((resolve)=>{
-         setTimeout(() => {
-             resolve()
-         }, time * 1000);
-     })
-}
 router.get('/',async ctx => {
     const findData = await obj.find('test',{name:"jack01"});
-    await sleep(1)
     ctx.response.body={
         code:'1',
         data: findData
