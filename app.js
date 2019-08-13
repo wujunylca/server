@@ -67,7 +67,7 @@ obj.find = function(cname,filter,fn){
 router.get('/',async ctx => {
     const findData = await obj.find('test',{name:"jack01"});
     ctx.response.body={
-        code:'1',
+        code:'2',
         data: findData
     }
 })
